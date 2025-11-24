@@ -1,0 +1,342 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav id="navbar" class="fixed top-0 left-0 z-50 flex h-20 w-full items-center duration-300 ease-in-out">
+      <div class="relative container mx-auto flex items-center justify-between px-3 lg:px-5">
+        <!-- logo -->
+        <div class="flex items-center gap-x-3">
+          <img src="image/logo.png" alt="hotel-cabin-logo" class="w-14 rounded-full" />
+          <h1 class="font-semibold text-amber-700 capitalize text-shadow-2xs text-shadow-amber-100">The Cabin Hotel</h1>
+        </div>
+        <!-- menu -->
+        <div class="hidden min-w-1/3 rounded-full bg-white/50 px-10 backdrop-blur-xs lg:block lg:py-2">
+          <ul class="flex w-full items-center justify-center">
+            <li class="rounded-full px-6 py-2 transition-all hover:bg-lime-300">
+              <a href="#" class="font-semibold tracking-wider text-gray-950">Home</a>
+            </li>
+            <li class="rounded-full px-6 py-2 transition-all hover:bg-lime-300">
+              <a href="#" class="font-semibold tracking-wider text-gray-950">Pricing</a>
+            </li>
+            <li class="rounded-full px-6 py-2 transition-all hover:bg-lime-300">
+              <a href="#" class="font-semibold tracking-wider text-gray-950">About</a>
+            </li>
+            <li class="rounded-full px-6 py-2 transition-all hover:bg-lime-300">
+              <a href="#" class="font-semibold tracking-wider text-gray-950">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <!-- humberger -->
+        <div class="lg:hidden">
+          <div>
+            <button id="btn-menu">
+              <i class="fas fa-bars text-3xl"></i>
+            </button>
+          </div>
+          <div class="absolute top-full right-0 left-0 hidden w-full bg-white" id="mobile-menu">
+            <ul class="flex w-full flex-col items-center justify-center gap-y-2 p-5">
+              <li class="rounded-full px-6 py-2 transition-all hover:bg-lime-300">
+                <a href="#" class="font-semibold tracking-wider text-gray-950">Home</a>
+              </li>
+              <li class="rounded-full px-6 py-2 transition-all hover:bg-lime-300">
+                <a href="#" class="font-semibold tracking-wider text-gray-950">Pricing</a>
+              </li>
+              <li class="rounded-full px-6 py-2 transition-all hover:bg-lime-300">
+                <a href="#" class="font-semibold tracking-wider text-gray-950">About</a>
+              </li>
+              <li class="rounded-full px-6 py-2 transition-all hover:bg-lime-300">
+                <a href="#" class="font-semibold tracking-wider text-gray-950">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- button -->
+        <a href="booking.html" class="hidden rounded-full bg-lime-500 px-5 py-2 font-semibold text-white transition-all hover:bg-lime-600 lg:block"> Booking Now! </a>
+      </div>
+    </nav>
+    <!-- hero section -->
+    <div id="hero" class="relative flex h-screen flex-col justify-center bg-[url('image/jumbotron.jpg')] bg-cover bg-center bg-no-repeat md:h-[70vh] lg:h-screen lg:justify-end lg:p-10">
+      <div class="absolute top-0 left-0 h-full w-full bg-gradient-to-b from-black/5 via-black/40 to-black/60"></div>
+      <div class="z-10 container mx-auto space-y-3 px-3 lg:space-y-10">
+        <div class="mt-15 grid grid-cols-3 gap-3 lg:my-10">
+          <div class="col-span-3 lg:col-span-2">
+            <p class="w-full text-3xl font-light text-white text-shadow-slate-950 text-shadow-sm lg:text-6xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, eius?</p>
+          </div>
+          <div class="lg:colspan-1 hidden lg:block">
+            <p class="font-extralight text-white text-shadow-slate-950 text-shadow-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae expedita culpa asperiores voluptatibus labore quod impedit animi, molestiae aperiam autem ea nulla eum temporibus ipsum aspernatur maxime placeat voluptatem suscipit dicta eligendi nihil, ipsa exercitationem. Tempore odit quam molestiae ratione.</p>
+          </div>
+        </div>
+        <div class="space-y-3 rounded-xl bg-gradient-to-r from-lime-100/10 via-lime-200/50 to-lime-900/50 p-5 shadow backdrop-blur-xs lg:my-10">
+          <h2 class="font-semibold text-white">Lorem ipsum dolor sit amet.</h2>
+          <div class="grid grid-cols-4 gap-5">
+            <div class="col-span-4 space-y-1 md:col-span-2 lg:col-span-1">
+              <label for="" class="text-sm font-semibold text-white">Lorem ipsum</label>
+              <input type="text" class="w-full rounded-xl bg-slate-100 px-5 py-2 placeholder:text-sm" value="Enter Value" />
+            </div>
+            <div class="col-span-4 flex flex-col space-y-1 md:col-span-2 lg:col-span-1">
+              <label for="" class="text-sm font-semibold text-white">Lorem ipsum</label>
+              <select name="" id="" class="rounded-xl bg-slate-100 px-5 py-2">
+                <option value="">Choose Option</option>
+              </select>
+            </div>
+            <div class="col-span-4 space-y-1 md:col-span-2 lg:col-span-1">
+              <label for="" class="text-sm font-semibold text-white">Lorem ipsum</label>
+              <input type="date" class="w-full rounded-xl bg-slate-100 px-5 py-2 placeholder:text-sm" value="Enter Value" />
+            </div>
+            <div class="col-span-4 space-y-1 md:col-span-2 lg:col-span-1">
+              <label for="" class="text-sm font-semibold text-white">Lorem ipsum</label>
+              <input type="date" class="w-full rounded-xl bg-slate-100 px-5 py-2 placeholder:text-sm" value="Enter Value" />
+            </div>
+          </div>
+          <div class="flex justify-end">
+            <a href="booking.html" class="rounded-full bg-black px-5 py-3 font-semibold text-white capitalize">Booking now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Owner section -->
+    <div id="owner" class="container mx-auto space-y-16 p-10">
+      <div class="flex flex-col items-center justify-center gap-y-5">
+        <h1 class="text-center text-3xl font-medium lg:text-left">Lorem ipsum dolor sit amet.</h1>
+        <p class="w-3/4 text-center text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates eaque qui provident dolorum reprehenderit. Ipsum, rerum. Aut ad quis minus!</p>
+      </div>
+      <div class="grid grid-cols-2 place-items-center gap-5">
+        <div class="col-span-2 lg:col-span-1">
+          <img src="image/gambar4.jpg " alt="cabin-hotel" class="aspect-video w-full rounded-xl shadow-sm" />
+        </div>
+        <div class="col-span-2 space-y-5 lg:col-span-1">
+          <div>
+            <i class="fa-solid fa-quote-left text-3xl text-amber-800"></i>
+          </div>
+          <p class="text-justify text-sm font-medium italic">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia cumque maxime corporis, porro, nemo tempore illo accusamus veniam, voluptates quia hic? Deleniti iste provident accusamus! Optio dolores atque, eligendi obcaecati at consequuntur voluptate voluptas, voluptatibus, aut quidem magni consequatur architecto?</p>
+          <div class="flex gap-x-3">
+            <div class="flex h-14 w-14 items-center justify-center rounded-full bg-slate-200">R</div>
+            <div>
+              <p class="font-medium">Riki Reza Ryansyah</p>
+              <small class="text-amber-800 uppercase">Owner</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- statistic  section-->
+    <div id="statistic" class="container mx-auto py-5">
+      <div class="grid grid-cols-4 gap-y-5 md:gap-y-3">
+        <div class="col-span-4 space-y-2 text-center md:col-span-2 lg:col-span-1">
+          <h1 class="font-poppins stat text-6xl text-amber-800" data-value="25K">25K</h1>
+          <p class="text-sm">Happy Customer</p>
+        </div>
+        <div class="col-span-4 space-y-2 text-center md:col-span-2 lg:col-span-1">
+          <h1 class="font-poppins text-6xl text-amber-800">84</h1>
+          <p class="text-sm">Available Rooms</p>
+        </div>
+        <div class="col-span-4 space-y-2 text-center md:col-span-2 lg:col-span-1">
+          <h1 class="font-poppins stat text-6xl text-amber-800" data-value="100%">100%</h1>
+          <p class="text-sm">Customer Satisfaction Level</p>
+        </div>
+        <div class="col-span-4 space-y-2 text-center md:col-span-2 lg:col-span-1">
+          <h1 class="font-poppins text-6xl text-amber-800">150</h1>
+          <p class="text-sm">Members</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- best deal destination -->
+    <div id="best-deal">
+      <div class="container mx-auto grid grid-cols-2 py-5">
+        <div class="col-span-2 flex flex-col justify-center space-y-5 bg-lime-950 p-10 lg:col-span-1">
+          <h1 class="text-3xl font-semibold text-white">Lorem ipsum dolor sit amet Lorem, ipsum.</h1>
+          <p class="text-sm text-gray-200">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo distinctio numquam, asperiores rem eaque recusandae similique laborum libero possimus reprehenderit nobis fugiat obcaecati facilis, qui explicabo sunt modi blanditiis enim optio rerum at vero quam voluptatibus. Repellat vero omnis aperiam.</p>
+          <a href="booking.html" class="w-fit rounded-xl bg-lime-500 px-5 py-2 font-medium text-white">Booking Now!</a>
+        </div>
+        <div class="col-span-2 lg:col-span-1">
+          <img src="image/gambar5.jpg" alt="gambar-5-hotel" class="aspect-video w-full" />
+        </div>
+      </div>
+    </div>
+
+    <!-- rooms Sections -->
+
+    <div id="" class="container mx-auto space-y-10 p-10">
+      <h1 class="font-poppins text-3xl font-medium">Our Rooms</h1>
+      <div class="grid grid-cols-3 gap-3">
+        <div class="group col-span-3 overflow-hidden rounded-xl lg:col-span-1">
+          <div class="relative">
+            <div class="absolute flex h-full w-full flex-col gap-y-3 rounded-xl bg-black/70 p-10 text-white opacity-0 transition-all ease-in-out group-hover:opacity-100">
+              <h1 class="font-poppins text-3xl font-semibold">Grand Deluxe Room</h1>
+              <p class="text-sm">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione fuga dolores magni aliquam mollitia ea porro. Iure aliquid quis vitae. Nisi ex blanditiis dolore velit, commodi nobis dolorum voluptas facilis?</p>
+              <div>
+                <p class="w-32">Price</p>
+                <p>IDR.2.500.000<span>/Night</span></p>
+              </div>
+              <div>
+                <p class="w-32">Capacity</p>
+                <p>5-people</p>
+              </div>
+              <div>
+                <p class="w-32">Size</p>
+                <p>10ft</p>
+              </div>
+              <div>
+                <p class="w-32">Services</p>
+                <p>Wifi, Tv, Playstation 5 & dll..</p>
+              </div>
+            </div>
+            <img src="image/room1.jpg" alt="room-tourism" class="h-[600px] w-full rounded-xl shadow-sm" />
+          </div>
+          <div class="space-y-2 text-center">
+            <h2 class="font-poppins text-3xl capitalize">Grand Deluxe Room</h2>
+            <p><span class="font-semibold text-amber-800">IDR.2.500.000</span>/Night</p>
+            <a href="booking.html" class="mt-2 bg-lime-400 px-5 py-1 font-semibold text-white transition-all hover:bg-lime-600">Booking Now</a>
+          </div>
+        </div>
+        <div class="group col-span-3 overflow-hidden rounded-xl lg:col-span-1">
+          <div class="relative">
+            <div class="absolute flex h-full w-full flex-col gap-y-3 rounded-xl bg-black/70 p-10 text-white opacity-0 transition-all ease-in-out group-hover:opacity-100">
+              <h1 class="font-poppins text-3xl font-semibold">Luxury Room</h1>
+              <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quas fugit, dolorem mollitia cumque quae consectetur autem rem amet pariatur sint ex dolor! Consequuntur illo autem laborum rerum obcaecati porro.</p>
+              <div>
+                <p class="w-32">Price</p>
+                <p>IDR.5.500.000<span>/Night</span></p>
+              </div>
+              <div>
+                <p class="w-32">Capacity</p>
+                <p>15-people</p>
+              </div>
+              <div>
+                <p class="w-32">Size</p>
+                <p>20ft</p>
+              </div>
+              <div>
+                <p class="w-32">Services</p>
+                <p>Wifi, Tv, Playstation 5 & dll..</p>
+              </div>
+            </div>
+            <img src="image/room2.jpg" alt="room-tourism" class="h-[600px] w-full rounded-xl shadow-sm" />
+          </div>
+          <div class="space-y-2 text-center">
+            <h2 class="font-poppins text-3xl capitalize">Luxury Room</h2>
+            <p><span class="font-semibold text-amber-800">IDR.5.500.000</span>/Night</p>
+            <a href="booking.html" class="mt-2 bg-lime-400 px-5 py-1 font-semibold text-white transition-all hover:bg-lime-600">Booking Now</a>
+          </div>
+        </div>
+        <div class="group col-span-3 overflow-hidden rounded-xl lg:col-span-1">
+          <div class="relative">
+            <div class="absolute flex h-full w-full flex-col gap-y-3 rounded-xl bg-black/70 p-10 text-white opacity-0 transition-all ease-in-out group-hover:opacity-100">
+              <h1 class="font-poppins text-3xl font-semibold">Family Vacation Room</h1>
+              <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas maiores cum rerum, voluptatibus vero hic nesciunt nam repudiandae et inventore aliquid veritatis harum alias ab officiis perspiciatis itaque. Labore, accusamus.</p>
+              <div>
+                <p class="w-32">Price</p>
+                <p>IDR.3.500.000<span>/Night</span></p>
+              </div>
+              <div>
+                <p class="w-32">Capacity</p>
+                <p>20-people</p>
+              </div>
+              <div>
+                <p class="w-32">Size</p>
+                <p>30ft</p>
+              </div>
+              <div>
+                <p class="w-32">Services</p>
+                <p>Wifi, Tv, Playstation 5 & dll..</p>
+              </div>
+            </div>
+            <img src="image/room3.jpg" alt="room-tourism" class="h-[600px] w-full rounded-xl shadow-sm" />
+          </div>
+          <div class="space-y-2 text-center">
+            <h2 class="font-poppins text-3xl capitalize">Family Vacation Room</h2>
+            <p><span class="font-semibold text-amber-800">IDR.3.500.000</span>/Night</p>
+            <a href="booking.html" class="mt-2 bg-lime-400 px-5 py-1 font-semibold text-white transition-all hover:bg-lime-600">Booking Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Testimoni section -->
+    <div id="testimonial" class="container mx-auto space-y-10 bg-slate-100 p-10">
+      <h1 class="text-center text-3xl font-semibold">Testimonial</h1>
+      <div class="grid grid-cols-3 gap-y-5 lg:gap-y-0">
+        <div class="col-span-3 flex flex-col items-center justify-center gap-y-5 lg:col-span-1">
+          <div class="h-24 w-24 rounded-full bg-slate-200">
+            <img src="image/avatar1.png" alt="avatar-hotel-cabin" class="h-full w-full rounded-full object-cover" />
+          </div>
+          <p class="w-3/4 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam quis nostrum, iste maxime eaque molestiae delectus dolorem doloremque laborum voluptate, officiis minima officia porro? Fugiat!</p>
+          <p class="text-gray-500">Abdul Dudul</p>
+        </div>
+        <div class="col-span-3 flex flex-col items-center justify-center gap-y-5 lg:col-span-1">
+          <div class="h-24 w-24 rounded-full bg-slate-200"></div>
+          <p class="w-3/4 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam quis nostrum, iste maxime eaque molestiae delectus dolorem doloremque laborum voluptate, officiis minima officia porro? Fugiat!</p>
+          <p class="text-gray-500">Abdul Dodol</p>
+        </div>
+        <div class="col-span-3 flex flex-col items-center justify-center gap-y-5 lg:col-span-1">
+          <div class="h-24 w-24 rounded-full bg-slate-200"></div>
+          <p class="w-3/4 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam quis nostrum, iste maxime eaque molestiae delectus dolorem doloremque laborum voluptate, officiis minima officia porro? Fugiat!</p>
+          <p class="text-gray-500">Abdul Kasim</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Join And Discover Section -->
+    <div id="join" class="container mx-auto space-y-10 p-10">
+      <div class="grid grid-cols-2">
+        <div class="col-span-2 lg:col-span-1">
+          <img src="image/logo.png" alt="logo-hotel-cabin" class="w-full rounded-full" />
+        </div>
+        <div class="col-span-2 flex flex-col items-center gap-x-5 lg:col-span-1 lg:flex-row">
+          <img src="image/mockup.png" alt="moockup-hotel-cabin" class="w-96" />
+          <div class="">
+            <img src="image/googleplay.png" alt="google-play-hotel-cabin" class="w-40" />
+            <img src="image/appstore.jpg" alt="app-store-hotel-cabin" class="w-40" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- footer section -->
+    <footer class="flex min-h-60 items-center bg-gray-950 py-10 text-white lg:py-0">
+      <div class="container mx-auto grid grid-cols-4 space-y-10 gap-y-5 p-10 lg:gap-y-0">
+        <div class="col-span-4 flex items-center lg:col-span-1">
+          <img src="image/logo.png" alt="logo-hotel-cabin" class="w-32 rounded-full" />
+        </div>
+        <div class="col-span-4 space-y-2 lg:col-span-1">
+          <h1 class="text-xl font-medium">Quick Menu</h1>
+          <ul>
+            <li>
+              <a href="#" class="text-sm">Home</a>
+            </li>
+            <li>
+              <a href="#" class="text-sm">Price</a>
+            </li>
+            <li>
+              <a href="#" class="text-sm">About</a>
+            </li>
+            <li>
+              <a href="#" class="text-sm">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-span-4 space-y-2 lg:col-span-1">
+          <h1 class="text-xl font-medium">Reservation</h1>
+          <div>
+            <p class="text-sm">Phone : 0812 2390 9878</p>
+            <p class="text-sm">Email : CabinHotel3r@gmail.com</p>
+          </div>
+        </div>
+        <div class="col-span-4 space-y-2 lg:col-span-1">
+          <h1 class="text-xl font-medium">Our Location</h1>
+          <div>Puncak Gunung Angkasa, -West Java</div>
+          <div>Indonesia WIB</div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

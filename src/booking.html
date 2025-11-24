@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booking Room - The Cabin Hotel</title>
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+
+  <body class="bg-gray-100">
+    <div class="container mx-auto p-5">
+      <h1 class="mb-10 text-center text-3xl font-semibold">Booking Room</h1>
+
+      <div class="mx-auto max-w-2xl rounded-xl bg-white p-8 shadow">
+        <!-- FORM -->
+        <div class="space-y-5">
+          <div>
+            <label class="font-semibold">Nama Lengkap</label>
+            <input id="nama" type="text" class="mt-1 w-full rounded-lg border px-4 py-2" placeholder="Masukkan Nama Anda" />
+          </div>
+
+          <div>
+            <label class="font-semibold">Tipe Kamar</label>
+            <select id="kamar" class="mt-1 w-full rounded-lg border px-4 py-2">
+              <option value="">-- Pilih Kamar --</option>
+              <option value="Grand Deluxe Room">Grand Deluxe Room</option>
+              <option value="Luxury Room">Luxury Room</option>
+              <option value="Family Vacation Room">Family Vacation Room</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="font-semibold">Check-in</label>
+            <input id="checkin" type="date" class="mt-1 w-full rounded-lg border px-4 py-2" />
+          </div>
+
+          <div>
+            <label class="font-semibold">Check-out</label>
+            <input id="checkout" type="date" class="mt-1 w-full rounded-lg border px-4 py-2" />
+          </div>
+
+          <div>
+            <label class="font-semibold">Jumlah Orang</label>
+            <input id="orang" type="number" min="1" class="mt-1 w-full rounded-lg border px-4 py-2" placeholder="Contoh: 3 orang" />
+          </div>
+        </div>
+
+        <!-- BUTTON -->
+        <div class="mt-8 text-center">
+          <button onclick="sendWA()" class="rounded-lg bg-lime-600 px-6 py-3 font-semibold text-white shadow hover:bg-lime-700">Kirim Booking via WhatsApp</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function sendWA() {
+        const nama = document.getElementById("nama").value;
+        const kamar = document.getElementById("kamar").value;
+        const checkin = document.getElementById("checkin").value;
+        const checkout = document.getElementById("checkout").value;
+        const orang = document.getElementById("orang").value;
+
+        if (!nama || !kamar || !checkin || !checkout || !orang) {
+          alert("Semua data harus diisi!");
+          return;
+        }
+
+        const pesan = `Halo, saya ingin melakukan booking:%0A` + `Nama: ${nama}%0A` + `Tipe Kamar: ${kamar}%0A` + `Check-in: ${checkin}%0A` + `Check-out: ${checkout}%0A` + `Jumlah Orang: ${orang}%0A%0A` + `Mohon konfirmasi ketersediaan.`;
+
+        const nomor = "6281223909878"; // Ganti dengan nomor WhatsApp Anda
+
+        window.open(`https://wa.me/${nomor}?text=${pesan}`, "_blank");
+      }
+    </script>
+  </body>
+</html>
