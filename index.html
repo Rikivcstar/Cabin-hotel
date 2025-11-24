@@ -64,12 +64,12 @@
           </div>
         </div>
         <!-- button -->
-        <a href="booking.html" class="hidden rounded-full bg-lime-500 px-5 py-2 font-semibold text-white transition-all hover:bg-lime-600 lg:block"> Booking Now! </a>
+        <a href="#" onclick="openBooking()" class="hidden rounded-full bg-lime-500 px-5 py-2 font-semibold text-white transition-all hover:bg-lime-600 lg:block"> Booking Now! </a>
       </div>
     </nav>
     <!-- hero section -->
     <div id="hero" class="relative flex h-screen flex-col justify-center bg-cover bg-center bg-no-repeat md:h-[70vh] lg:h-screen lg:justify-end lg:p-10">
-      <div class="absolute top-0 left-0 h-full w-full bg-gradient-to-b from-black/5 via-black/40 to-black/60"></div>
+      <div class="pointer-events-none absolute top-0 left-0 h-full w-full bg-gradient-to-b from-black/5 via-black/40 to-black/60"></div>
       <div class="z-10 container mx-auto space-y-3 px-3 lg:space-y-10">
         <div class="mt-15 grid grid-cols-3 gap-3 lg:my-10">
           <div class="col-span-3 lg:col-span-2">
@@ -102,7 +102,7 @@
             </div>
           </div>
           <div class="flex justify-end">
-            <a href="booking.html" class="rounded-full bg-black px-5 py-3 font-semibold text-white capitalize">Booking now</a>
+            <a href="#" onclick="openBooking()" class="rounded-full bg-black px-5 py-3 font-semibold text-white capitalize">Booking now</a>
           </div>
         </div>
       </div>
@@ -160,7 +160,7 @@
         <div class="col-span-2 flex flex-col justify-center space-y-5 bg-lime-950 p-10 lg:col-span-1">
           <h1 class="text-3xl font-semibold text-white">Lorem ipsum dolor sit amet Lorem, ipsum.</h1>
           <p class="text-sm text-gray-200">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo distinctio numquam, asperiores rem eaque recusandae similique laborum libero possimus reprehenderit nobis fugiat obcaecati facilis, qui explicabo sunt modi blanditiis enim optio rerum at vero quam voluptatibus. Repellat vero omnis aperiam.</p>
-          <a href="booking.html" class="w-fit rounded-xl bg-lime-500 px-5 py-2 font-medium text-white">Booking Now!</a>
+          <a href="#" onclick="openBooking()" class="w-fit rounded-xl bg-lime-500 px-5 py-2 font-medium text-white">Booking Now!</a>
         </div>
         <div class="col-span-2 lg:col-span-1">
           <img src="src/image/gambar5.jpg" alt="gambar-5-hotel" class="aspect-video w-full" />
@@ -200,7 +200,7 @@
           <div class="space-y-2 text-center">
             <h2 class="font-poppins text-3xl capitalize">Grand Deluxe Room</h2>
             <p><span class="font-semibold text-amber-800">IDR.2.500.000</span>/Night</p>
-            <a href="booking.html" class="mt-2 bg-lime-400 px-5 py-1 font-semibold text-white transition-all hover:bg-lime-600">Booking Now</a>
+            <a href="#" onclick="openBooking()" class="mt-2 bg-lime-400 px-5 py-1 font-semibold text-white transition-all hover:bg-lime-600">Booking Now</a>
           </div>
         </div>
         <div class="group col-span-3 overflow-hidden rounded-xl lg:col-span-1">
@@ -230,7 +230,7 @@
           <div class="space-y-2 text-center">
             <h2 class="font-poppins text-3xl capitalize">Luxury Room</h2>
             <p><span class="font-semibold text-amber-800">IDR.5.500.000</span>/Night</p>
-            <a href="booking.html" class="mt-2 bg-lime-400 px-5 py-1 font-semibold text-white transition-all hover:bg-lime-600">Booking Now</a>
+            <a href="#" onclick="openBooking()" class="mt-2 bg-lime-400 px-5 py-1 font-semibold text-white transition-all hover:bg-lime-600">Booking Now</a>
           </div>
         </div>
         <div class="group col-span-3 overflow-hidden rounded-xl lg:col-span-1">
@@ -260,7 +260,7 @@
           <div class="space-y-2 text-center">
             <h2 class="font-poppins text-3xl capitalize">Family Vacation Room</h2>
             <p><span class="font-semibold text-amber-800">IDR.3.500.000</span>/Night</p>
-            <a href="booking.html" class="mt-2 bg-lime-400 px-5 py-1 font-semibold text-white transition-all hover:bg-lime-600">Booking Now</a>
+            <a href="#" onclick="openBooking()" class="mt-2 bg-lime-400 px-5 py-1 font-semibold text-white transition-all hover:bg-lime-600">Booking Now</a>
           </div>
         </div>
       </div>
@@ -341,6 +341,85 @@
         </div>
       </div>
     </footer>
+    <!-- MODAL BOOKING -->
+    <div id="bookingModal" class="fixed inset-0 z-[9999] hidden items-center justify-center bg-black/50">
+      <div class="relative z-[10000] max-h-[90vh] w-full max-w-xl overflow-y-auto rounded-xl bg-white p-8 shadow-lg">
+        <h2 class="mb-5 text-center text-2xl font-semibold">Booking Room</h2>
+
+        <div class="space-y-4">
+          <div>
+            <label class="font-semibold">Nama Lengkap</label>
+            <input id="nama" type="text" class="mt-1 w-full rounded-lg border px-4 py-2" placeholder="Masukkan Nama Anda" />
+          </div>
+
+          <div>
+            <label class="font-semibold">Tipe Kamar</label>
+            <select id="kamar" class="mt-1 w-full rounded-lg border px-4 py-2">
+              <option value="">-- Pilih Kamar --</option>
+              <option value="Grand Deluxe Room">Grand Deluxe Room</option>
+              <option value="Luxury Room">Luxury Room</option>
+              <option value="Family Vacation Room">Family Vacation Room</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="font-semibold">Check-in</label>
+            <input id="checkin" type="date" class="mt-1 w-full rounded-lg border px-4 py-2" />
+          </div>
+
+          <div>
+            <label class="font-semibold">Check-out</label>
+            <input id="checkout" type="date" class="mt-1 w-full rounded-lg border px-4 py-2" />
+          </div>
+
+          <div>
+            <label class="font-semibold">Jumlah Orang</label>
+            <input id="orang" type="number" min="1" class="mt-1 w-full rounded-lg border px-4 py-2" placeholder="Contoh: 3 orang" />
+          </div>
+        </div>
+
+        <div class="mt-6 flex items-center justify-between">
+          <button onclick="closeBooking()" class="rounded-lg bg-gray-500 px-5 py-2 text-white">Close</button>
+
+          <button onclick="sendWA()" class="rounded-lg bg-lime-600 px-6 py-2 font-semibold text-white">Kirim via WhatsApp</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function openBooking() {
+        document.getElementById("bookingModal").classList.remove("hidden");
+        document.getElementById("bookingModal").classList.add("flex");
+      }
+
+      function closeBooking() {
+        document.getElementById("bookingModal").classList.add("hidden");
+        document.getElementById("bookingModal").classList.remove("flex");
+      }
+
+      function sendWA() {
+        const nama = document.getElementById("nama").value;
+        const kamar = document.getElementById("kamar").value;
+        const checkin = document.getElementById("checkin").value;
+        const checkout = document.getElementById("checkout").value;
+        const orang = document.getElementById("orang").value;
+
+        if (!nama || !kamar || !checkin || !checkout || !orang) {
+          alert("Semua data harus diisi!");
+          return;
+        }
+
+        const pesan = `Halo, saya ingin melakukan booking:%0A` + `Nama: ${nama}%0A` + `Tipe Kamar: ${kamar}%0A` + `Check-in: ${checkin}%0A` + `Check-out: ${checkout}%0A` + `Jumlah Orang: ${orang}%0A%0A` + `Mohon konfirmasi ketersediaan.`;
+
+        const nomor = "6281223909878";
+        window.open(`https://wa.me/${nomor}?text=${pesan}`, "_blank");
+      }
+
+      // Close modal when clicking overlay
+      document.getElementById("bookingModal").addEventListener("click", function (e) {
+        if (e.target === this) closeBooking();
+      });
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="src/js/script.js"></script>
   </body>
