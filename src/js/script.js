@@ -381,3 +381,46 @@ function initAnimations() {
   console.log("🎨 All sections animated");
   console.log("📱 Mobile menu working");
 }
+
+const chatBtn = document.getElementById("chatbot-btn");
+const chatBox = document.getElementById("chatbot-box");
+const closeChat = document.getElementById("close-chatbot");
+const sendBtn = document.getElementById("send-btn");
+const userInput = document.getElementById("user-input");
+const chatBody = document.querySelector(".chatbot-body");
+
+// Buka chatbot
+chatBtn.onclick = () => {
+  chatBox.style.display = "flex";
+};
+
+// Tutup chatbot
+closeChat.onclick = () => {
+  chatBox.style.display = "none";
+};
+
+// Fungsi kirim pesan sederhana
+sendBtn.onclick = () => {
+  let text = userInput.value.trim();
+  if (!text) return;
+
+  let userMessage = document.createElement("p");
+  userMessage.className = "bot-msg";
+  userMessage.style.background = "#dbeafe";
+  userMessage.textContent = text;
+  chatBody.appendChild(userMessage);
+
+  userInput.value = "";
+
+  // Balasan AI palsu
+  setTimeout(() => {
+    let reply = document.createElement("p");
+    reply.className = "bot-msg";
+    reply.textContent = "Ini balasan otomatis karna masih pakai messege manual :)";
+    chatBody.appendChild(reply);
+
+    chatBody.scrollTop = chatBody.scrollHeight;
+  }, 500);
+
+  chatBody.scrollTop = chatBody.scrollHeight;
+};
